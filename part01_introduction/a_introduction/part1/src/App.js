@@ -34,7 +34,7 @@ const App = () => {
   )
 }*/
 
-/* example04: JSX */
+/* example04: JSX 
 
 const App = () => {
   const now = new Date()
@@ -49,6 +49,26 @@ const App = () => {
     React.createElement(
       'p', null, a, ' plus ', b, ' is ', a + b
     )
+  )
+}*/
+
+/* example05: adding multiple components */
+
+const Hello = () => {  
+  return (    
+    <div>      
+      <p>Hello world</p>    
+    </div>  
+  )
+}
+const App = () => {
+  return (
+    <div>
+      <h1>Greetings</h1>
+      <Hello />  
+      <Hello />
+      <Hello /> 
+    </div>
   )
 }
 
