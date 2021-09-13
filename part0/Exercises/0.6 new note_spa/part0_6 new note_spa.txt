@@ -1,0 +1,20 @@
+title new note_spa
+
+browser->server: note input
+server->browser: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over browser:
+js code fetches the form-element
+browser executes event handler
+rerenders the note list
+sends the new note to the server
+end note over 
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa.son
+server->browser: [{content: "single page app does not reload the whole page", date:"2019-05-25"}]
+
+note over browser:
+browser executes event handler
+renders the notes
+the new note is included
+end note over

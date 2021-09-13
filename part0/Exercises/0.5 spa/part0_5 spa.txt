@@ -1,0 +1,25 @@
+title single page app
+
+note over browser:
+user access spa
+end note over 
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server->browser: HTML code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+sercer->browser: return main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server->browser: return main.js
+
+note over browser:
+browser executes js code
+return of the JSON data from the server
+end note over 
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server->browser: H[{ content:"HTML is easy", date : "2019-05-23!}, ...]
+
+note over browser:
+browser executes event handler
+renders the notes
+end note over
