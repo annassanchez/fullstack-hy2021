@@ -147,7 +147,7 @@ const Footer = () => {
   )
 } */
 
-/* example09: some notes */
+/* example09: some notes 
 
 const Hello = (props) => {  
   return (    
@@ -165,7 +165,6 @@ const Footer = () => {
   )
 }
 //* defining the component as an array makes the root element not necesary
-//* also a root element is necessary (f.e. <div>) -- without it the result is an error message
 const App = () => {
   const name = 'Peter'
   const age = 10
@@ -176,6 +175,38 @@ const App = () => {
     <Hello name = "Ophelia" age = {age + 2}/>,
     <Footer /> 
   ]
+}*/
+
+/* example10: some notes */
+
+const Hello = (props) => {  
+  return (    
+    <div>      
+      <p>Hello {props.name}, you are {props.age}</p>    
+    </div>  
+  )
+}
+
+const Footer = () => {
+  return (
+    <div>
+      greeting app created by <a href="https://github.com/annassanchez">annassanchez</a>
+    </div>
+  )
+}
+//* the best of solution is using a root component element, however as it is stipulated there's no need to use <div> elements
+const App = () => {
+  const name = 'Peter'
+  const age = 10
+  return (
+    <>
+      <h1>Greetings</h1>
+      <Hello name = "Maya" age = {26 + 10}/>
+      <Hello name = {name} age = {age}/>
+      <Hello name = "Ophelia" age = {age + 2}/>
+      <Footer />
+    </> 
+  )
 }
 
 export default App;
