@@ -72,7 +72,7 @@ const App = () => {
   )
 }*/
 
-/* example06: passing data to components */
+/* example06: passing data to components 
 
 const Hello = (props) => {  
   return (    
@@ -88,6 +88,28 @@ const App = () => {
       <Hello name = "George"/>  
       <Hello name = "Daisy"/>
       <Hello name = "Ophelia"/> 
+    </div>
+  )
+}*/
+
+/* example07: using more props */
+
+const Hello = (props) => {  
+  return (    
+    <div>      
+      <p>Hello {props.name}, you are {props.age}</p>    
+    </div>  
+  )
+}
+const App = () => {
+  const name = 'Peter'
+  const age = 10
+  return (
+    <div>
+      <h1>Greetings</h1>
+      <Hello name = "Maya" age = {26 + 10}/>  
+      <Hello name = {name} age = {age}/>
+      <Hello name = "Ophelia" age = {age+2}/> 
     </div>
   )
 }
