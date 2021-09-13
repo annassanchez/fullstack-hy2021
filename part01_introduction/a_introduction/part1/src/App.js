@@ -1,7 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
+/*function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -20,6 +19,50 @@ function App() {
       </header>
     </div>
   );
+}*/
+
+/*Example 01
+const App = () => {
+  console.log('Hello from component')
+  return(
+    <div>
+      <p>Hello World</p>
+      <p>Hola wapo tas solo? oops</p>
+    </div>
+  )
+}*/
+
+/* Example 02
+const App = () => {
+  const now = new Date()
+  const a = 10
+  const b = 20
+  return(
+    <div>
+      <p>Hello world, it is {now.toString()}</p>
+      <p>
+        {a} plus {b} is {a + b}
+      </p>
+    </div>
+  )
+}*/
+
+/*Example 03
+const Hello = () => {
+  return(
+    <div>
+      <p>Hello World</p>
+    </div>
+  )
 }
+
+const App = () => {
+  return(
+    <div>
+      <h1>Greetings</h1>
+      <Hello />
+    </div>
+  )
+}*/
 
 export default App;
