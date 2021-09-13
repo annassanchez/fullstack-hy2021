@@ -114,7 +114,7 @@ const App = () => {
   )
 }*/
 
-/* example08: some notes */
+/* example08: some notes 
 
 const Hello = (props) => {  
   return (    
@@ -131,8 +131,9 @@ const Footer = () => {
     </div>
   )
 }
-//* react components always need to be capitalized *//
-const App = () => {
+/* react components always need to be capitalized */
+/* also a root element is necessary (f.e. <div>) -- without it the result is an error message*/
+/*const App = () => {
   const name = 'Peter'
   const age = 10
   return (
@@ -144,6 +145,37 @@ const App = () => {
       <Footer /> 
     </div>
   )
+} */
+
+/* example09: some notes */
+
+const Hello = (props) => {  
+  return (    
+    <div>      
+      <p>Hello {props.name}, you are {props.age}</p>    
+    </div>  
+  )
+}
+
+const Footer = () => {
+  return (
+    <div>
+      greeting app created by <a href="https://github.com/annassanchez">annassanchez</a>
+    </div>
+  )
+}
+//* defining the component as an array makes the root element not necesary
+//* also a root element is necessary (f.e. <div>) -- without it the result is an error message
+const App = () => {
+  const name = 'Peter'
+  const age = 10
+  return [
+    <h1>Greetings</h1>,
+    <Hello name = "Maya" age = {26 + 10}/>,  
+    <Hello name = {name} age = {age}/>,
+    <Hello name = "Ophelia" age = {age + 2}/>,
+    <Footer /> 
+  ]
 }
 
 export default App;
